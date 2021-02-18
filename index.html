@@ -4,115 +4,37 @@
   <meta charset="utf-8">
   <title>Quiz</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css/main.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Quiz</h1>
-  </header>
-  <main>
-    <h2>Question 1</h2>
-    <p>What is your goal?<br><sub>(you may select multiple options)</sub></p>
-    <!-- Control Buttons -->
-    <div id="myBtnContainer">
-      <button class="btn" onclick="filterSelection('review')">Portfolio Review</button>
-      <button class="btn" onclick="filterSelection('job')">Find An Available Designer</button>
-      <button class="btn" onclick="filterSelection('networking')">Networking</button>
-    </div>
-    <div class="clear"></div>
-    <h2>Question 2</h2>
-    <p>What area of design / specialization are you in search of?<br><sub><sub>(you may select multiple options)</sub></p>
-    <div id="myBtnContainer">
-      <button class="btn" onclick="filterSelection('web')">Web Design</button>
-      <button class="btn" onclick="filterSelection('ui')">UI & UX</button>
-      <button class="btn" onclick="filterSelection('branding')">Branding</button>
-      <button class="btn" onclick="filterSelection('motion')">Motion Design</button>
-      <button class="btn" onclick="filterSelection('illustration')">Illustration</button>
-      <button class="btn" onclick="filterSelection('print')">Print Design</button>
-    </div>
-    <div class="clear"></div>
-    <h2>Question 3</h2>
-    <p>What key attributes are you looking for in a designer?<br><sub>(you may select multiple options)</sub></p>
-    <div id="myBtnContainer">
-      <button class="btn" onclick="filterSelection('alt')">Altruistics</button>
-      <button class="btn" onclick="filterSelection('com')">Communicative</button>
-      <button class="btn" onclick="filterSelection('con')">Conscientious</button>
-      <button class="btn" onclick="filterSelection('cont')">Continuous-Learner</button>
-      <button class="btn" onclick="filterSelection('det')">Detail-Oriented</button>
-      <button class="btn" onclick="filterSelection('eff')">Efficient</button>
-      <button class="btn" onclick="filterSelection('ent')">Enthusiastic</button>
-      <button class="btn" onclick="filterSelection('fle')">Flexible</button>
-      <button class="btn" onclick="filterSelection('goa')">Goal-Oriented</button>
-      <button class="btn" onclick="filterSelection('ind')">Independent</button>
-      <button class="btn" onclick="filterSelection('str')">Strategic</button>
-      <button class="btn" onclick="filterSelection('tea')">Team-Oriented</button>
-    </div>
-    <!-- The filterable elements. Can have multiple class names which can be used if they belong to multiple categories. -->
-    <div class="container">
-      <div class="filterDiv review job web ui branding alt eff goa ent det">Designer 1</div>
-      <div class="filterDiv job web motion branding fle tea cont con alt">Designer 2</div>
-      <div class="filterDiv review job networking motion print illustration cont det tea str fle">Designer 3</div>
-      <div class="filterDiv networking web motion illustration alt com con cont det">Designer 4</div>
-      <div class="filterDiv review networking branding motion web eff ent fle goa ind">Designer 5</div>
-      <div class="filterDiv job illustration motion print ind str tea alt com">Designer 6</div>
-      <div class="filterDiv review job networking web ui branding con cont det eff ent">Designer 7</div>
-      <div class="filterDiv job networking motion branding illustration fle goa ind str tea">Designer 8</div>
-      <div class="filterDiv review job print ui web alt com con cont det">Designer 9</div>
-      <div class="filterDiv review branding web illustration tea str ind goa fle">Designer 10</div>
+
+    <div class="quiz-container">
+        <div class="title">Match With A Designer Quiz</div>
+        <div id="question" class="question"></div>
+        <label class="option">
+            <input type="radio" name="option" value="1" />
+            <span class="option1"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="2" />
+            <span class="option2"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="3" />
+            <span class="option3"></span>
+        </label>
+        <!-- Buttons -->
+        <div class="controls">
+            <button class="previous">Previous</button>
+            <button class="next">Continue</button>
+        </div>
     </div>
 
-    <script>
-      filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
+    <div class="result">
 
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
+    </div>
 
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-    </script>
-
-  </main>
-  <footer>
-  </footer>
+    <script src=questions.js></script>
+    <script src="main.js"></script>
 </body>
 </html>
