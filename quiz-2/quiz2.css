@@ -1,7 +1,47 @@
 * { box-sizing: border-box; }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Barlow', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Bungee', cursive;
+}
+
+.card {
+  background-color: #f1f2f2;
+  padding: 50px;
+  margin: 50px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 50px;
+}
+
+.card-content {
+  text-align: center;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.next-btn {
+  width: 200px;
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 40px;
+  background-color: #84c27e;
+  color: black;
+  border-color: #84c27e;
+  font-family: 'Barlow', sans-serif;
+  font-size: large;
+}
+
+.next-btn:hover {
+  background-color: black;
+  border-color: black;
+  color: white;
 }
 
 /* ---- isotope ---- */
@@ -22,7 +62,6 @@ body {
 
 .ui-group {
   display: block;
-  margin-right: 20px;
 }
 
 .ui-group h3 {

@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.designer-list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.designer-list li {
+  margin-bottom: 1.5rem;
+}
+
+.designer-list figure {
+  margin: 0;
+}
+
+.designer-list img {
+  display: block;
+  width: 200px;
+}
