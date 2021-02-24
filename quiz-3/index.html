@@ -3,32 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Quiz Draft</title>
-  <link href="css/main.css" rel="stylesheet">
+  <title>Quiz Test 2</title>
+  <link href="quiz2.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="intro">
-  <h1>Match With A Designer Quiz (draft)</h1>
-  <p>This quiz was designed to help you connect with designers.</p>
-  <p>It will provide you with a filtered list of designers who are available for portfolio reviews, available to work on projects and those available who are interested in networking.</p>
-  <button>Get Started</button>
+<div class="card">
+  <div class="card-content">
+    <h1>Match With A Designer Quiz</h1>
+    <p>This quiz was designed to help you connect with designers.</p>
+    <p>Find a designer available for work, interested in networking, or requesting a portfolio review. By the end of the quiz, you will have a list of designers that match what you're looking for!</p>
+    <button class="next-btn">Get Started</button>
+  </div>
 </div>
 
-<div class="question-1">
-  <h2>Question 1</h2>
-  <p>What is your goal?</p>
-  <p><sub>(You may select multiple options)</sub></p>
+<div class="filters card">
+  <div class="card-content">
+    <h2>Question 1</h2>
+    <p>What is your goal?<br><sub>(you may select multiple options)</sub</p>
+    <div class="container">
+      <div class="ui-group">
+        <div>
+          <ul class="ks-cboxtags filter-select" value-group="size" multiple>
+            <li><input type="checkbox" id="checkbox1" value=".review"><label for="checkbox1">Portfolio Review</label></li>
+            <li><input type="checkbox" id="checkbox2" value=".job"><label for="checkbox2">Job Request</label></li>
+            <li><input type="checkbox" id="checkbox3" value=".networking"><label for="checkbox3">Networking</label></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="next-btn">Continue</button>
+  </div>
 </div>
 
-<div class="results">
-  <h2>Results</h2>
-  <ul></ul>
+<div class="filters card">
+  <div class="card-content">
+    <h2>Question 2</h2>
+    <p>What design specialization are you in search of?<br><sub>(you may select multiple options)</sub</p>
+    <div class="ui-group">
+      <ul class="ks-cboxtags filter-select" value-group="size" multiple>
+        <li><input type="checkbox" id="checkbox4" value=".web"><label for="checkbox4">Web Design</li>
+        <li><input type="checkbox" id="checkbox5" value=".ui"><label for="checkbox5">UI & UX</label></li>
+        <li><input type="checkbox" id="checkbox6" value=".branding"><label for="checkbox6">Branding</label></li>
+        <li><input type="checkbox" id="checkbox7" value=".motion"><label for="checkbox7">Motion Design</label></li>
+        <li><input type="checkbox" id="checkbox8" value=".illustration"><label for="checkbox8">Illustration</label></li>
+        <li><input type="checkbox" id="checkbox9" value=".print"><label for="checkbox9">Print Design</label></li>
+      </ul>
+    </div>
+    <button class="next-btn">Continue</button>
+  </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/designers.js"></script>
-<script src="js/main.js"></script>
+<div class="filters card">
+  <div class="card-content">
+    <h2>Question 3</h2>
+    <p>What key attributes are you looking for in a designer?<br><sub>(you may select multiple options)</sub</p>
+    <div class="ui-group">
+      <ul class="ks-cboxtags filter-select" value-group="size" multiple>
+        <li><input type="checkbox" id="checkbox10" value=".alt"><label for="checkbox10">Altruistic</li>
+        <li><input type="checkbox" id="checkbox11" value=".com"><label for="checkbox11">Communicative</label></li>
+        <li><input type="checkbox" id="checkbox12" value=".con"><label for="checkbox12">Conscientious</label></li>
+        <li><input type="checkbox" id="checkbox13" value=".cont"><label for="checkbox13">Continuous Learner</label></li>
+        <li><input type="checkbox" id="checkbox16" value=".det"><label for="checkbox14">Detail-Oriented</label></li>
+        <li><input type="checkbox" id="checkbox15" value=".eff"><label for="checkbox15">Efficient</label></li>
+        <li><input type="checkbox" id="checkbox16" value=".ent"><label for="checkbox16">Enthusiastic</li>
+        <li><input type="checkbox" id="checkbox17" value=".fle"><label for="checkbox17">Flexible</label></li>
+        <li><input type="checkbox" id="checkbox18" value=".goa"><label for="checkbox18">Goal-Oriented</label></li>
+        <li><input type="checkbox" id="checkbox19" value=".ind"><label for="checkbox19">Independent</label></li>
+        <li><input type="checkbox" id="checkbox20" value=".str"><label for="checkbox20">Strategic</label></li>
+        <li><input type="checkbox" id="checkbox21" value=".tea"><label for="checkbox21">Team-Oriented</label></li>
+      </ul>
+    </div>
+    <button class="next-btn">Continue</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <h2>Results</h2>
+    <div class="grid">
+      <div class="designer review job networking web ui branding alt com con cont det"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review job networking web ui branding alt com con cont det"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review job networking web ui branding eff ent fle goa ind"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review job networking motion illustration print eff ent fle goa ind"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review job networking motion illustration print str tea alt com con"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review job motion illustration print str tea alt com con"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review job web branding illustration cont det eff ent fle"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review job web branding illustration cont det eff ent fle"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer job networking web branding illustration goa ind str tea alt"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer job networking ui motion print goa ind str tea alt"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer job networking ui motion print alt com con cont det"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review networking ui motion print alt com con cont det"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review networking web ui branding alt com con cont det"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review networking web ui branding eff ent fle goa ind"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review web ui branding eff ent fle goa ind"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review motion illustration print eff ent fle goa ind"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review motion illustration print str tea alt com con"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer job motion illustration print str tea alt com con"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer job web branding illustration str tea alt com con"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer job web branding illustration cont det eff ent fle"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer networking web branding illustration cont det eff ent fle"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer networking ui motion print cont det eff ent fle"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer networking ui motion print goa ind str tea alt"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer networking ui motion print goa ind str tea alt"><img src="img/300x300.svg" width="100" height="100"></div>
+    </div>
+    <div>
+      <button class="next-btn">Restart Quiz</button>
+    </div>
+  </div>
+</div>
+
+<script src="script2.js"></script>
+<script src="script3.js"></script>
+<script src="script1.js"></script>
 
 </body>
 </html>
