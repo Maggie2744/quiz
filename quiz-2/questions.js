@@ -3,7 +3,7 @@ const questions = [
     "question": "What is your goal?",
     "answer1": "Portfolio Review",
     "answer1Total": "1",
-    "answer2": "Find An Available Designer",
+    "answer2": "Job Request",
     "answer2Total": "2",
     "answer3": "Networking",
     "answer3Total": "3"
@@ -26,11 +26,29 @@ const questions = [
   {
     "question":
       "What key attributes are you looking for in a designer?<br>(you may select multiple options)",
-    "answer1": "Love, Career, Money",
+    "answer1": "Altruistic",
     "answer1Total": "1",
-    "answer2": "Money, Career, Love",
-    "answer2Total": "3",
-    "answer3": "Career, Love, Money",
-    "answer3Total": "2"
+    "answer2": "Communicative",
+    "answer2Total": "2",
+    "answer3": "Conscientious",
+    "answer3Total": "3"
+    "answer4Total": "Continuous Learner",
+    "answer4Total": "4",
+    "answer5Total": "Detail-Oriented",
+    "answer5Total": "5",
+    "answer6Total": "Efficient",
+    "answer6Total": "6"
+    "answer7": "Enthusiastic",
+    "answer7Total": "7",
+    "answer8": "Flexible",
+    "answer8Total": "8",
+    "answer9": "Goal-Oriented",
+    "answer9Total": "9"
+    "answer10": "Independent",
+    "answer10Total": "10",
+    "answer11": "Strategic",
+    "answer11Total": "11",
+    "answer12": "Team-Oriented",
+    "answer12Total": "12"
   }
 ]

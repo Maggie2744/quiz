@@ -2,7 +2,6 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Quiz Test 2</title>
   <link href="quiz2.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,16 +24,21 @@
   <div class="card-content">
     <h2>Question 1</h2>
     <p>What is your goal?<br><sub>(you may select multiple options)</sub</p>
-    <div class="container">
-      <div class="ui-group">
-        <div class="filter-select" value-group="size" multiple>
-          <ul class="ks-cboxtags">
-            <li><input type="checkbox" id="checkboxOne" value=".review"><label for="checkboxOne">Portfolio Review</label></li>
-            <li><input type="checkbox" id="checkboxTwo" value=".job"><label for="checkboxTwo">Job Request</label></li>
-            <li><input type="checkbox" id="checkboxThree" value=".networking"><label for="checkboxThree">Networking</label></li>
-          </ul>
-        </div>
+      <div class="container">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne">Rainbow Dash</label></li>
+          <li><input type="checkbox" id="checkboxTwo" value="Cotton Candy" checked><label for="checkboxTwo">Cotton Candy</label></li>
+          <li><input type="checkbox" id="checkboxThree" value="Rarity" checked><label for="checkboxThree">Rarity</label></li>
+        </ul>
       </div>
+    <div class="ui-group">
+      <select class="filter-select" value-group="color" multiple>
+        <ul>
+          <li><option class="btn-select" value="">All</option></li>
+          <li><option class="btn-select" value=".red">Portfolio Review</option></li>
+          <li><option class="btn-select" value=".blue">Job Request / Hiring Purposes</option></li>
+          <li><option class="btn-select" value=".yellow">Networking</option></li>
+      </select>
     </div>
     <button class="next-btn">Continue</button>
   </div>
