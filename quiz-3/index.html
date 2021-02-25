@@ -4,31 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Quiz Test 2</title>
-  <link href="quiz2.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+  <script src="questions.js"></script>
 </head>
 <body>
 
-<div class="card">
+<div class="card intro" id="intro">
   <div class="card-content">
     <h1>Match With A Designer Quiz</h1>
     <p>This quiz was designed to help you connect with designers.</p>
     <p>Find a designer available for work, interested in networking, or requesting a portfolio review. By the end of the quiz, you will have a list of designers that match what you're looking for!</p>
-    <button class="next-btn">Get Started</button>
+    <input class="next-btn" id="btnIntro" type="button" value="Get Started" onclick="ShowHideDiv(this)" />
   </div>
 </div>
 
-<div class="filters card">
+<div class="filters card question-1" id="question1">
   <div class="card-content">
     <h2>Question 1</h2>
     <p>What is your goal?<br><sub>(you may select multiple options)</sub</p>
     <div class="container">
       <div class="ui-group">
         <div>
-          <ul class="ks-cboxtags filter-select" value-group="size" multiple>
+          <ul class="ks-cboxtags filter-select" value-group="size">
             <li><input type="checkbox" id="checkbox1" value=".review"><label for="checkbox1">Portfolio Review</label></li>
             <li><input type="checkbox" id="checkbox2" value=".job"><label for="checkbox2">Job Request</label></li>
             <li><input type="checkbox" id="checkbox3" value=".networking"><label for="checkbox3">Networking</label></li>
@@ -40,12 +41,12 @@
   </div>
 </div>
 
-<div class="filters card">
+<div class="filters card question-2" id="question-2">
   <div class="card-content">
     <h2>Question 2</h2>
     <p>What design specialization are you in search of?<br><sub>(you may select multiple options)</sub</p>
     <div class="ui-group">
-      <ul class="ks-cboxtags filter-select" value-group="size" multiple>
+      <ul class="ks-cboxtags filter-select" value-group="size">
         <li><input type="checkbox" id="checkbox4" value=".web"><label for="checkbox4">Web Design</li>
         <li><input type="checkbox" id="checkbox5" value=".ui"><label for="checkbox5">UI & UX</label></li>
         <li><input type="checkbox" id="checkbox6" value=".branding"><label for="checkbox6">Branding</label></li>
@@ -58,17 +59,17 @@
   </div>
 </div>
 
-<div class="filters card">
+<div class="filters card question-3" id="question-3">
   <div class="card-content">
     <h2>Question 3</h2>
     <p>What key attributes are you looking for in a designer?<br><sub>(you may select multiple options)</sub</p>
     <div class="ui-group">
-      <ul class="ks-cboxtags filter-select" value-group="size" multiple>
+      <ul class="ks-cboxtags filter-select" value-group="size">
         <li><input type="checkbox" id="checkbox10" value=".alt"><label for="checkbox10">Altruistic</li>
         <li><input type="checkbox" id="checkbox11" value=".com"><label for="checkbox11">Communicative</label></li>
         <li><input type="checkbox" id="checkbox12" value=".con"><label for="checkbox12">Conscientious</label></li>
         <li><input type="checkbox" id="checkbox13" value=".cont"><label for="checkbox13">Continuous Learner</label></li>
-        <li><input type="checkbox" id="checkbox16" value=".det"><label for="checkbox14">Detail-Oriented</label></li>
+        <li><input type="checkbox" id="checkbox14" value=".det"><label for="checkbox14">Detail-Oriented</label></li>
         <li><input type="checkbox" id="checkbox15" value=".eff"><label for="checkbox15">Efficient</label></li>
         <li><input type="checkbox" id="checkbox16" value=".ent"><label for="checkbox16">Enthusiastic</li>
         <li><input type="checkbox" id="checkbox17" value=".fle"><label for="checkbox17">Flexible</label></li>
@@ -82,34 +83,34 @@
   </div>
 </div>
 
-<div class="card">
+<div class="card results" id="results">
   <div class="card-content">
     <h2>Results</h2>
     <div class="grid">
-      <div class="designer review job networking web ui branding alt com con cont det"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review job networking web ui branding alt com con cont det"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review job networking web ui branding eff ent fle goa ind"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review job networking motion illustration print eff ent fle goa ind"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review job networking motion illustration print str tea alt com con"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review job motion illustration print str tea alt com con"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review job web branding illustration cont det eff ent fle"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review job web branding illustration cont det eff ent fle"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer job networking web branding illustration goa ind str tea alt"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer job networking ui motion print goa ind str tea alt"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer job networking ui motion print alt com con cont det"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review networking ui motion print alt com con cont det"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review networking web ui branding alt com con cont det"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review networking web ui branding eff ent fle goa ind"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review web ui branding eff ent fle goa ind"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review motion illustration print eff ent fle goa ind"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer review motion illustration print str tea alt com con"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer job motion illustration print str tea alt com con"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer job web branding illustration str tea alt com con"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer job web branding illustration cont det eff ent fle"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer networking web branding illustration cont det eff ent fle"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer networking ui motion print cont det eff ent fle"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer networking ui motion print goa ind str tea alt"><img src="img/300x300.svg" width="100" height="100"></div>
-      <div class="designer networking ui motion print goa ind str tea alt"><img src="img/300x300.svg" width="100" height="100"></div>
+      <div class="designer review job networking web ui branding alt com con cont det"><img src="img/designer-1.svg" width="200" height="200"></div>
+      <div class="designer review job networking web ui branding alt com con cont det"><img src="img/designer-2.svg" width="200" height="200"></div>
+      <div class="designer review job networking web ui branding eff ent fle goa ind"><img src="img/designer-3.svg" width="200" height="200"></div>
+      <div class="designer review job networking motion illustration print eff ent fle goa ind"><img src="img/designer-4.svg" width="200" height="200"></div>
+      <div class="designer review job networking motion illustration print str tea alt com con"><img src="img/designer-5.svg" width="200" height="200"></div>
+      <div class="designer review job motion illustration print str tea alt com con"><img src="img/designer-6.svg" width="200" height="200"></div>
+      <div class="designer review job web branding illustration cont det eff ent fle"><img src="img/designer-7.svg" width="200" height="200"></div>
+      <div class="designer review job web branding illustration cont det eff ent fle"><img src="img/designer-8.svg" width="200" height="200"></div>
+      <div class="designer job networking web branding illustration goa ind str tea alt"><img src="img/designer-9.svg" width="200" height="200"></div>
+      <div class="designer job networking ui motion print goa ind str tea alt"><img src="img/designer-10.svg" width="200" height="200"></div>
+      <div class="designer job networking ui motion print alt com con cont det"><img src="img/designer-11.svg" width="200" height="200"></div>
+      <div class="designer review networking ui motion print alt com con cont det"><img src="img/designer-12.svg" width="200" height="200"></div>
+      <div class="designer review networking web ui branding alt com con cont det"><img src="img/designer-13.svg" width="200" height="200"></div>
+      <div class="designer review networking web ui branding eff ent fle goa ind"><img src="img/designer-14.svg" width="200" height="200"></div>
+      <div class="designer review web ui branding eff ent fle goa ind"><img src="img/designer-15.svg" width="200" height="200"></div>
+      <div class="designer review motion illustration print eff ent fle goa ind"><img src="img/designer-16.svg" width="200" height="200"></div>
+      <div class="designer review motion illustration print str tea alt com con"><img src="img/designer-17.svg" width="200" height="200"></div>
+      <div class="designer job motion illustration print str tea alt com con"><img src="img/designer-18.svg" width="200" height="200"></div>
+      <div class="designer job web branding illustration str tea alt com con"><img src="img/designer-19.svg" width="200" height="200"></div>
+      <div class="designer job web branding illustration cont det eff ent fle"><img src="img/designer-20.svg" width="200" height="200"></div>
+      <div class="designer networking web branding illustration cont det eff ent fle"><img src="img/designer-21.svg" width="200" height="200"></div>
+      <div class="designer networking ui motion print cont det eff ent fle"><img src="img/designer-22.svg" width="200" height="200"></div>
+      <div class="designer networking ui motion print goa ind str tea alt"><img src="img/designer-23.svg" width="200" height="200"></div>
+      <div class="designer networking ui motion print goa ind str tea alt"><img src="img/designer-24.svg" width="200" height="200"></div>
     </div>
     <div>
       <button class="next-btn">Restart Quiz</button>
