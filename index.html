@@ -18,11 +18,11 @@
     <h1>Match With A Designer Quiz</h1>
     <p>This quiz was designed to help you connect with designers.</p>
     <p>Find a designer available for work, interested in networking, or requesting a portfolio review. By the end of the quiz, you will have a list of designers that match what you're looking for!</p>
-    <input class="next-btn" id="btnIntro" type="button" value="Get Started" onclick="TestsFunction()">
+    <button class="next-btn" id="btnIntro" onclick="myFunctionOne">Get Started</button>
   </div>
 </div>
 
-<div class="filters card question-1" id="question1">
+<div class="filters card question-1" id="question1" style="display:none;">
   <div class="card-content">
     <h2>Question 1</h2>
     <p>What is your goal?<br><sub>(you may select multiple options)</sub</p>
@@ -41,7 +41,7 @@
   </div>
 </div>
 
-<div class="filters card question-2" id="question-2">
+<div class="filters card question-2" id="question-2" style="display:none;">
   <div class="card-content">
     <h2>Question 2</h2>
     <p>What design specialization are you in search of?<br><sub>(you may select multiple options)</sub</p>
@@ -59,7 +59,7 @@
   </div>
 </div>
 
-<div class="filters card question-3" id="question-3">
+<div class="filters card question-3" id="question-3" style="display:none;">
   <div class="card-content">
     <h2>Question 3</h2>
     <p>What key attributes are you looking for in a designer?<br><sub>(you may select multiple options)</sub</p>
@@ -83,7 +83,7 @@
   </div>
 </div>
 
-<div class="card results" id="results">
+<div class="card results" id="results" style="display:none;">
   <div class="card-content">
     <h2>Results</h2>
     <div class="grid">
@@ -117,6 +117,13 @@
     </div>
   </div>
 </div>
+
+<script>
+    $("#btnIntro").on("click", myFunctionOne => {
+      $(".question-1").show();
+      $(".intro").hide();
+    })
+</script>
 
 <script src="script2.js"></script>
 <script src="script3.js"></script>

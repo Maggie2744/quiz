@@ -14,6 +14,10 @@
 // 5- 10 - Meh
 // 5 - Are You Even Real
 
+$("#btnIntro").on("click", ("myFunctionOne") => {
+  $("question-1").show();
+  $(".intro").hide();
+})
 
 let currentQuestion = 0;
 let score = [];
