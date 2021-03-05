@@ -36,15 +36,18 @@ div .item {
 
 .card {
   background-color: #f1f2f2;
-  padding: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   border-radius: 20px;
-  max-width: 900px;
+  max-width: 600px;
   margin: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.card-content {
+.results-title, .card-content, .results-btn {
   text-align: center;
   max-width: 500px;
   margin-left: auto;
@@ -52,18 +55,31 @@ div .item {
 }
 
 .designer {
-  padding: 10px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
 }
 
 .ks-cboxtags {
     list-style: none;
     border: none;
     background-color: inherit;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .label {
     display: inline-block;
-    width: 200px;
+    width: 120px;
     background-color: rgba(255, 255, 255, .9);
     border: 2px solid rgba(139, 139, 139, .3);
     color: #adadad;
@@ -151,4 +167,118 @@ ul.ks-cboxtags li input[type="checkbox"] {
   border-color: black;
   color: white;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
+}
+
+.results-container img {
+  position: relative;
+  transform: translateX(15%);
+}
+
+@media only screen and (min-width: 25em) {
+
+  .card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .results-container {
+    position: relative;
+    transform: translateX(15%);
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  .card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .results-container {
+    position: relative;
+    transform: translateX(0%);
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ks-cboxtags {
+      list-style: none;
+      border: none;
+      background-color: inherit;
+      display: inline;
+      position: relative;
+      left: 0%;
+      transform: translateX(0%);
+      }
+
+  .ks-cboxtags-1 {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  .card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    max-width: 900px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .results-container {
+    width: 700px;
+    position: relative;
+    transform: translateX(-15%);
+  }
+
+  .ks-cboxtags {
+      list-style: none;
+      border: none;
+      background-color: inherit;
+      display: inline-block;
+  }
+
+  .ks-cboxtags-1 {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 }

@@ -25,9 +25,11 @@
       <div class="card-content">
         <h2>Question 1</h2>
         <p>What is your goal?<br><sub>(you may select multiple options)</sub></p>
-        <button class="ks-cboxtags"><input type="checkbox" value=".review" id="review" /><label class="label" for="review">Portfolio Review</label></button>
-        <button class="ks-cboxtags"><input type="checkbox" value=".job" id="job" /><label class="label" for="job">Job Request</label></button>
-        <button class="ks-cboxtags"><input type="checkbox" value=".networking" id="networking" /><label class="label" for="networking">Networking</label></button>
+        <div class="button-group">
+          <button class="ks-cboxtags ks-cboxtags-1"><input type="checkbox" value=".review" id="review" /><label class="label" for="review">Portfolio Review</label></button>
+          <button class="ks-cboxtags ks-cboxtags-1"><input type="checkbox" value=".job" id="job" /><label class="label" for="job">Job Request</label></button>
+          <button class="ks-cboxtags ks-cboxtags-1"><input type="checkbox" value=".networking" id="networking" /><label class="label" for="networking">Networking</label></button>
+        </div>
         <div>
           <button class="next-btn" id="question-1-btn">Continue</button>
         </div>
@@ -72,9 +74,9 @@
   </div>
 
   <div class="card">
-    <div class="card-content">
-      <h2>Results</h2>
-        <div id="container">
+    <div class="card-content results-card">
+      <h2 class="results-title">Results</h2>
+        <div id="container" class="results-container">
           <img class="designer web ui branding alt com con cont det review job networking" src="img/designer-1.svg">
           <img class="designer web ui branding alt com con cont det review job networking" src="img/designer-2.svg">
           <img class="designer web ui branding eff ent fle goal ind review job networking" src="img/designer-3.svg">
@@ -100,8 +102,8 @@
           <img class="designer ui motion print goal ind str team alt networking" src="img/designer-23.svg">
           <img class="designer ui motion print goal ind str team alt networking" src="img/designer-24.svg">
         </div>
-        <div>
-          <button class="next-btn" id="restart-btn">Restart Quiz</button
+        <div class="results-btn">
+          <button class="next-btn" id="restart-btn">Restart Quiz</button>
         </div>
       </div>
   </div>
