@@ -1,0 +1,47 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+-moz-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+
+body {
+  font-family: sans-serif;
+}
+
+.item {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+  float: left;
+}
+
+p {
+  margin: 0;
+}
+
+#filter-display {
+  font-size: 18px;
+  padding: 0.5em;
+  border: 1px solid #CCC;
+  color: blue;
+}
+
+.red { background: red; }
+.blue { background: blue; }
+.green { background: green; }
+.yellow { background: yellow; color: black; }

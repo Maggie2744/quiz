@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quiz Test</title>
+  <link href="main.css" rel="stylesheet">
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+</head>
+<body>
+
+  <div class="card intro" id="intro">
+    <div class="card-content">
+      <h1>Match With A Designer Quiz</h1>
+      <p>This quiz was designed to help you connect with designers.</p>
+      <p>Find a designer available for work, interested in networking, or requesting a portfolio review. By the end of the quiz, you will have a list of designers that match what you're looking for!</p>
+      <button class="next-btn" id="btnIntro" onclick="myFunctionOne">Get Started</button>
+    </div>
+  </div>
+
+  <div id="options">
+    <div class="option-set card" data-group="brand">
+      <div class="card-content">
+        <h2>Question 1</h2>
+        <p>What is your goal?<br><sub>(you may select multiple options)</sub></p>
+        <button class="ks-cboxtags"><input type="checkbox" value=".review" id="review" /><label class="label" for="review">Portfolio Review</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".job" id="job" /><label class="label" for="job">Job Request</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".networking" id="networking" /><label class="label" for="networking">Networking</label></button>
+        <div>
+          <button class="next-btn" id="question-1-btn">Continue</button>
+        </div>
+      </div>
+    </div>
+    <div class="option-set card" data-group="type">
+      <div class="card-content">
+        <h2>Question 2</h2>
+        <p>What design specialization are you in search of?<br><sub>(you may select multiple options)</sub></p>
+        <button class="ks-cboxtags"><input type="checkbox" value=".web" id="web" /><label class="label" for="web">Web Design</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".ui" id="ui" /><label class="label" for="ui">UI & UX</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".branding" id="branding" /><label class="label" for="branding">Branding</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".motion" id="motion" /><label class="label" for="motion">Motion Design</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".illustration" id="illustration" /><label class="label" for="illustration">Illustration</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".print" id="print" /><label class="label" for="print">Print Design</label></button>
+        <div>
+          <button class="next-btn" id="question-2-btn">Continue</button>
+        </div>
+      </div>
+    </div>
+    <div class="option-set card" data-group="color">
+      <div class="card-content">
+        <h2>Question 3</h2>
+        <p>What key attributes are you looking for in a designer?<br><sub>(you may select multiple options)</sub></p>
+        <button class="ks-cboxtags"><input type="checkbox" value=".alt" id="alt" /><label class="label" for="alt">Altruistic</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".com" id="com" /><label class="label" for="com">Communicative</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".con" id="con" /><label class="label" for="con">Conscientious</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".cont" id="cont" /><label class="label" for="cont">Continuous Learner</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".det" id="det" /><label class="label" for="det">Detail-oriented</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".eff" id="eff" /><label class="label" for="eff">Efficient</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".ent" id="ent" /><label class="label" class="label" for="ent">Enthusiastic</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".fle" id="fle" /><label class="label" for="fle">Flexible</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".goal" id="goal" /><label class="label" for="goal">Goal-oriented</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".ind" id="ind" /><label class="label" for="ind">Independent</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".str" id="str" /><label class="label" for="str">Strategic</label></button>
+        <button class="ks-cboxtags"><input type="checkbox" value=".team" id="team" /><label class="label" for="team">Team-oriented</label></button>
+        <div>
+          <button class="next-btn" id="question-3-btn">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <h2>Results</h2>
+        <div id="container">
+          <img class="designer web ui branding alt com con cont det review job networking" src="img/designer-1.svg">
+          <img class="designer web ui branding alt com con cont det review job networking" src="img/designer-2.svg">
+          <img class="designer web ui branding eff ent fle goal ind review job networking" src="img/designer-3.svg">
+          <img class="designer motion illustration print eff ent fle goal ind review job networking" src="img/designer-4.svg">
+          <img class="designer motion illustration print str team alt com con review job networking" src="img/designer-5.svg">
+          <img class="designer motion illustration print str team alt com con review job" src="img/designer-6.svg">
+          <img class="designer web branding illustration cont det eff ent fle review job" src="img/designer-7.svg">
+          <img class="designer web branding illustration cont det eff ent fle review job" src="img/designer-8.svg">
+          <img class="designer web branding illustration goal ind str team alt job networking" src="img/designer-9.svg">
+          <img class="designer ui motion print goal ind str team alt job networking" src="img/designer-10.svg">
+          <img class="designer ui motion print alt com con cont det job networking" src="img/designer-11.svg">
+          <img class="designer ui motion print alt com con cont det review networking" src="img/designer-12.svg">
+          <img class="designer web ui branding alt com con cont det review networking" src="img/designer-13.svg">
+          <img class="designer web ui branding eff ent fle goal ind review networking" src="img/designer-14.svg">
+          <img class="designer web ui branding eff ent fle goal ind review" src="img/designer-15.svg">
+          <img class="designer motion illustration print eff ent fle goal ind review" src="img/designer-16.svg">
+          <img class="designer motion illustration print str team alt com con review" src="img/designer-17.svg">
+          <img class="designer motion illustration print str team alt com con job" src="img/designer-18.svg">
+          <img class="designer web branding illustration str team alt com con job" src="img/designer-19.svg">
+          <img class="designer web branding illustration con det eff ent fle job" src="img/designer-20.svg">
+          <img class="designer web branding illustration cont det eff ent fle networking" src="img/designer-21.svg">
+          <img class="designer ui motion print cont det eff ent fle networking" src="img/designer-22.svg">
+          <img class="designer ui motion print goal ind str team alt networking" src="img/designer-23.svg">
+          <img class="designer ui motion print goal ind str team alt networking" src="img/designer-24.svg">
+        </div>
+        <div>
+          <button class="next-btn" id="restart-btn">Restart Quiz</button
+        </div>
+      </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+</body>
+</html>

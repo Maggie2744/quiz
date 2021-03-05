@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quiz Test 2</title>
+  <link href="main.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+  <script src="test.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="card intro" id="intro">
+  <div class="card-content">
+    <h1>Match With A Designer Quiz</h1>
+    <p>This quiz was designed to help you connect with designers.</p>
+    <p>Find a designer available for work, interested in networking, or requesting a portfolio review. By the end of the quiz, you will have a list of designers that match what you're looking for!</p>
+    <button class="next-btn" id="btnIntro" onclick="myFunctionOne">Get Started</button>
+  </div>
+</div>
+
+<div class="filters card question-1" id="question1">
+  <div class="card-content">
+    <h2>Question 1</h2>
+    <p>What is your goal?<br><sub>(you may select multiple options)</sub</p>
+    <div class="ui-group">
+      <ul id="filter_list">
+        <li><a class="tag1 active" href="#">Portfolio Review</a></li>
+        <li><a class="tag2 active" href="#">Job Request</a></li>
+        <li><a class="tag3 active" href="#">Networking</a></li>
+      </ul>
+    </div>
+    <input class="next-btn" id="question-1-btn" type="button" value="Continue">
+  </div>
+</div>
+
+<div class="filters card question-2" id="question-2">
+  <div class="card-content">
+    <h2>Question 2</h2>
+    <p>What design specialization are you in search of?<br><sub>(you may select multiple options)</sub</p>
+    <div class="ui-group">
+      <ul id="filter_list">
+        <li><a class="tag4 active" href="#">Web Design</a></li>
+        <li><a class="tag5 active" href="#">UI & UX</a></li>
+        <li><a class="tag6 active" href="#">Branding</a></li>
+        <li><a class="tag7 active" href="#">Motion Design</a></li>
+        <li><a class="tag8 active" href="#">Illustration</a></li>
+        <li><a class="tag9 active" href="#">Print Design</a></li>
+      </ul>
+    </div>
+    <input class="next-btn" id="question-2-btn" type="button" value="Continue">
+  </div>
+</div>
+
+<div class="filters card question-3" id="question-3">
+  <div class="card-content">
+    <h2>Question 3</h2>
+    <p>What key attributes are you looking for in a designer?<br><sub>(you may select multiple options)</sub</p>
+    <div class="ui-group">
+      <ul id="filter_list">
+        <li><a class="tag10 active" href="#">Altruistic</a></li>
+        <li><a class="tag11 active" href="#">Communicative</a></li>
+        <li><a class="tag12 active" href="#">Conscientious</a></li>
+        <li><a class="tag13 active" href="#">Continuous Learner</a></li>
+        <li><a class="tag14 active" href="#">Detail-Oriented</a></li>
+        <li><a class="tag15 active" href="#">Efficient</a></li>
+        <li><a class="tag16 active" href="#">Enthusiastic</a></li>
+        <li><a class="tag17 active" href="#">Flexible</a></li>
+        <li><a class="tag18 active" href="#">Goal-Oriented</a></li>
+        <li><a class="tag19 active" href="#">Independent</a></li>
+        <li><a class="tag20 active" href="#">Strategic</a></li>
+        <li><a class="tag21 active" href="#">Team-Oriented</a></li>
+      </ul>
+    </div>
+    <input class="next-btn" id="question-3-btn" type="button" value="Continue">
+  </div>
+</div>
+
+<div class="card results" id="results">
+  <div class="card-content">
+    <h2>Results</h2>
+    <div class="grid">
+      <article class="tag1">
+        <img src="img/designer-1.svg" width="200" height="200">
+      </article>
+      <article class="tag2">
+        <img src="img/designer-2.svg" width="200" height="200">
+      </article>
+      <article class="tag3">
+        <img src="img/designer-3.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-4.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-5.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-6.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-7.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-8.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-9.svg" width="200" height="200">
+      </article>
+      <article>
+        <img src="img/designer-10.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-11.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-12.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-13.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-14.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-15.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-16.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-17.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-18.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-19.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-20.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-21.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-22.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-23.svg" width="200" height="200">
+      </article>
+      <article class="">
+        <img src="img/designer-24.svg" width="200" height="200">
+      </article>
+    </div>
+    <div>
+      <input class="next-btn" id="restart-btn" type="button" value="Restart Quiz">
+    </div>
+  </div>
+</div>
+
+<script src="test.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</body>
+</html>

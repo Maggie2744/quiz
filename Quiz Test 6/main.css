@@ -4,7 +4,18 @@
 @-webkit-viewport { width: device-width; scale: 1; }
 @viewport { width: device-width; scale: 1; }
 
-* { box-sizing: border-box; }
+-moz-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
 body {
   font-family: 'Barlow', sans-serif;
@@ -12,15 +23,22 @@ body {
   padding: 20px;
 }
 
-h1, h2 {
-  font-family: 'Bungee', cursive;
+div .item {
+  display: none;
+}
+
+#filter-display {
+  font-size: 18px;
+  padding: 0.5em;
+  border: 1px solid #CCC;
+  color: blue;
 }
 
 .card {
   background-color: #f1f2f2;
   padding: 50px;
   border-radius: 20px;
-  max-width: 800px;
+  max-width: 900px;
   margin: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -28,23 +46,22 @@ h1, h2 {
 
 .card-content {
   text-align: center;
-  max-width: 400px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Start of other css */
-
-ul {
-  display: inline;
+.designer {
+  padding: 10px;
 }
 
-ul.ks-cboxtags {
+.ks-cboxtags {
     list-style: none;
-    padding: 20px;
+    border: none;
+    background-color: inherit;
 }
 
-ul.ks-cboxtags li label{
+.label {
     display: inline-block;
     width: 200px;
     background-color: rgba(255, 255, 255, .9);
@@ -62,12 +79,12 @@ ul.ks-cboxtags li label{
     transition: all .2s;
 }
 
-ul.ks-cboxtags li label {
+.label {
     padding: 8px 12px;
     cursor: pointer;
 }
 
-ul.ks-cboxtags li label::before {
+.label::before {
     display: inline-block;
     font-style: normal;
     font-variant: normal;
@@ -89,7 +106,7 @@ ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
 
 */
 
-ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+.ks-cboxtags input[type="checkbox"]:checked + .label {
     border: 2px solid green;
     background-color: green;
     color: #fff;
@@ -102,12 +119,12 @@ ul.ks-cboxtags li input[type="checkbox"] {
 }
 */
 
-ul.ks-cboxtags li input[type="checkbox"] {
+.ks-cboxtags input[type="checkbox"] {
   position: absolute;
   opacity: 0;
 }
 
-ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+.ks-cboxtags input[type="checkbox"]:focus + .label {
   border: 2px solid aqua;
 }
 
@@ -134,64 +151,4 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
   border-color: black;
   color: white;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
-}
-
-/* ---- isotope ---- */
-
-.grid {
-  background: #f1f2f2;
-  max-width: 1200px;
-}
-
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/* ui group */
-
-.ui-group {
-  display: block;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.ui-group h3 {
-  display: inline-block;
-  margin-right: 0.2em;
-  font-size: 16px;
-}
-
-.ui-group .button-group {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-
-@media only screen and (min-width: 25em) {
-
-
-
-}
-
-@media only screen and (min-width: 38em) {
-
-
-
-}
-
-@media only screen and (min-width: 60em) {
-
-
-
-}
-
-@media only screen and (min-width: 90em) {
-
-
-
 }

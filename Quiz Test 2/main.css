@@ -33,6 +33,63 @@ h1, h2 {
   margin-right: auto;
 }
 
+/* CSS for other filtering */
+
+ul#filter_list{
+	padding: 0;
+}
+
+ul#filter_list li{
+	display: inline-block;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	list-style-type: none;
+}
+
+ul#filter_list a{
+	display: block;
+	padding: 15px 55px 15px 20px;
+	color:#ffffff;
+	text-decoration:none;
+	border-radius:5px;
+	position:relative;
+}
+
+ul#filter_list a:after{
+	content:'';
+	display:inline-block;
+	width:25px;
+	height:25px;
+	padding:3px 7px;
+	color:#ffffff;
+	box-sizing:border-box;
+	position:absolute;
+	top:12px;
+	right:12px;
+}
+
+ul#filter_list a.active:after{content:'\2713'}
+
+a.tag1,article.tag1 h3:before{background-color:#84c27e;}
+a.tag2,article.tag2 h3:before{background-color:#84c27e;}
+a.tag3,article.tag3 h3:before{background-color:#84c27e;}
+
+article{
+	margin-top:20px;
+	border-top:thin solid #f0f0f0;
+}
+article.hide{display:none;}
+article h3:before{
+	content:'';
+	display:inline-block;
+	width:16px;
+	height:16px;
+	margin-right:10px;
+
+	border-radius:50%;
+	background-color:#000;
+}
+
 /* Start of other css */
 
 ul {
@@ -80,27 +137,12 @@ ul.ks-cboxtags li label::before {
     transition: transform .3s ease-in-out;
 }
 
-/*
-ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
-    content: "\f00c";
-    transform: rotate(-360deg);
-    transition: transform .3s ease-in-out;
-}
-
-*/
-
 ul.ks-cboxtags li input[type="checkbox"]:checked + label {
     border: 2px solid green;
     background-color: green;
     color: #fff;
     transition: all .2s;
 }
-
-/*
-ul.ks-cboxtags li input[type="checkbox"] {
-  display: inline;
-}
-*/
 
 ul.ks-cboxtags li input[type="checkbox"] {
   position: absolute;
@@ -170,7 +212,6 @@ ul {
   display: inline-block;
   margin-right: 20px;
 }
-
 
 @media only screen and (min-width: 25em) {
 

@@ -9,7 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
-  <script src="main.js"></script>
+  <script src="questions.js"></script>
+  <script src="script2.js"></script>
+  <script src="script3.js"></script>
+  <script src="script1.js"></script>
 </head>
 <body>
 
@@ -25,16 +28,17 @@
 <div class="filters card question-1" id="question1">
   <div class="card-content">
     <h2>Question 1</h2>
-    <p>What is your goal?<br><sub>(you may select multiple options)</sub></p>
+    <p>What is your goal?<br><sub>(you may select multiple options)</sub</p>
     <div class="container">
-      <div class="filters">
-        <div class="ui-group">
+      <div class="ui-group">
+        <div>
           <ul class="ks-cboxtags filter-select" value-group="size">
-            <li><input type="checkbox" id="checkbox1" value=".portfolio"><label for="checkbox1">Portfolio Review</li>
+            <li><input type="checkbox" id="checkbox1" value=".review"><label for="checkbox1">Portfolio Review</label></li>
             <li><input type="checkbox" id="checkbox2" value=".job"><label for="checkbox2">Job Request</label></li>
             <li><input type="checkbox" id="checkbox3" value=".networking"><label for="checkbox3">Networking</label></li>
           </ul>
         </div>
+      </div>
     </div>
     <input class="next-btn" id="question-1-btn" type="button" value="Continue">
   </div>
@@ -43,7 +47,7 @@
 <div class="filters card question-2" id="question-2">
   <div class="card-content">
     <h2>Question 2</h2>
-    <p>What design specialization are you in search of?<br><sub>(you may select multiple options)</sub></p>
+    <p>What design specialization are you in search of?<br><sub>(you may select multiple options)</sub</p>
     <div class="ui-group">
       <ul class="ks-cboxtags filter-select" value-group="size">
         <li><input type="checkbox" id="checkbox4" value=".web"><label for="checkbox4">Web Design</li>
@@ -61,7 +65,7 @@
 <div class="filters card question-3" id="question-3">
   <div class="card-content">
     <h2>Question 3</h2>
-    <p>What key attributes are you looking for in a designer?<br><sub>(you may select multiple options)</sub></p>
+    <p>What key attributes are you looking for in a designer?<br><sub>(you may select multiple options)</sub</p>
     <div class="ui-group">
       <ul class="ks-cboxtags filter-select" value-group="size">
         <li><input type="checkbox" id="checkbox10" value=".alt"><label for="checkbox10">Altruistic</li>
@@ -117,7 +121,16 @@
   </div>
 </div>
 
-<script src="main.js"></script>
+<script>
+    $("#btnIntro").on("click", myFunctionOne => {
+      $(".question-1").show();
+      $(".intro").hide();
+    })
+</script>
+
+<script src="script2.js"></script>
+<script src="script3.js"></script>
+<script src="script1.js"></script>
 
 </body>
 </html>

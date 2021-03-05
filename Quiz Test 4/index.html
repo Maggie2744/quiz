@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quiz Test 4</title>
+  <link href="main-4.css" rel="stylesheet">
+  <script src="main-4.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+</head>
+<body>
+
+  <h1>Match With A Designer Quiz</h1>
+
+  <div id="options">
+    <div class="option-set" data-group="question1">
+      <input type="checkbox" value=".portfolio" id="portfolio" /><label for="portfolio">Portfolio Review (brand1)</label>
+      <input type="checkbox" value=".job" id="job" /><label for="job">Job Request (brand2)</label>
+      <input type="checkbox" value=".networking" id="networking" /><label for="networking">Networking (brand3)</label>
+    </div>
+    <div class="option-set" data-group="type">
+      <input type="checkbox" value="" id="type-all" class="all" checked /><label for="type-all">all types</label>
+      <input type="checkbox" value=".type1" id="type1" /><label for="type1">type1</label>
+      <input type="checkbox" value=".type2" id="type2" /><label for="type2">type2</label>
+      <input type="checkbox" value=".type3" id="type3" /><label for="type3">type3</label>
+      <input type="checkbox" value=".type4" id="type4" /><label for="type4">type4</label>
+    </div>
+    <div class="option-set" data-group="color">
+      <input type="checkbox" value="" id="color-all" class="all" checked /><label for="color-all">all colors</label>
+      <input type="checkbox" value=".red" id="red" /><label for="red">red</label>
+      <input type="checkbox" value=".blue" id="blue" /><label for="blue">blue</label>
+      <input type="checkbox" value=".green" id="green" /><label for="green">green</label>
+      <input type="checkbox" value=".yellow" id="yellow" /><label for="yellow">yellow</label>
+    </div>
+    <div class="option-set" data-group="size">
+      <input type="checkbox" value="" id="size-all" class="all" checked /><label for="size-all">all sizes</label>
+      <input type="checkbox" value=".uk-size8" id="uk-size8" /><label for="uk-size8">uk-size8</label>
+      <input type="checkbox" value=".uk-size9" id="uk-size9" /><label for="uk-size9">uk-size9</label>
+      <input type="checkbox" value=".uk-size10" id="uk-size10" /><label for="uk-size10">uk-size10</label>
+      <input type="checkbox" value=".uk-size11" id="uk-size11" /><label for="uk-size11">uk-size11</label>
+    </div>
+  </div>
+
+  <div id="container"><div class="card results" id="results">
+    <div class="card-content">
+      <h2>Results</h2>
+      <div class="grid">
+        <div class="designer review job networking web ui branding alt com con cont det"><img src="img/designer-1.svg" width="200" height="200"></div>
+        <div class="designer review job networking web ui branding alt com con cont det"><img src="img/designer-2.svg" width="200" height="200"></div>
+        <div class="designer review job networking web ui branding eff ent fle goa ind"><img src="img/designer-3.svg" width="200" height="200"></div>
+        <div class="designer review job networking motion illustration print eff ent fle goa ind"><img src="img/designer-4.svg" width="200" height="200"></div>
+        <div class="designer review job networking motion illustration print str tea alt com con"><img src="img/designer-5.svg" width="200" height="200"></div>
+        <div class="designer review job motion illustration print str tea alt com con"><img src="img/designer-6.svg" width="200" height="200"></div>
+        <div class="designer review job web branding illustration cont det eff ent fle"><img src="img/designer-7.svg" width="200" height="200"></div>
+        <div class="designer review job web branding illustration cont det eff ent fle"><img src="img/designer-8.svg" width="200" height="200"></div>
+        <div class="designer job networking web branding illustration goa ind str tea alt"><img src="img/designer-9.svg" width="200" height="200"></div>
+        <div class="designer job networking ui motion print goa ind str tea alt"><img src="img/designer-10.svg" width="200" height="200"></div>
+        <div class="designer job networking ui motion print alt com con cont det"><img src="img/designer-11.svg" width="200" height="200"></div>
+        <div class="designer review networking ui motion print alt com con cont det"><img src="img/designer-12.svg" width="200" height="200"></div>
+        <div class="designer review networking web ui branding alt com con cont det"><img src="img/designer-13.svg" width="200" height="200"></div>
+        <div class="designer review networking web ui branding eff ent fle goa ind"><img src="img/designer-14.svg" width="200" height="200"></div>
+        <div class="designer review web ui branding eff ent fle goa ind"><img src="img/designer-15.svg" width="200" height="200"></div>
+        <div class="designer review motion illustration print eff ent fle goa ind"><img src="img/designer-16.svg" width="200" height="200"></div>
+        <div class="designer review motion illustration print str tea alt com con"><img src="img/designer-17.svg" width="200" height="200"></div>
+        <div class="designer job motion illustration print str tea alt com con"><img src="img/designer-18.svg" width="200" height="200"></div>
+        <div class="designer job web branding illustration str tea alt com con"><img src="img/designer-19.svg" width="200" height="200"></div>
+        <div class="designer job web branding illustration cont det eff ent fle"><img src="img/designer-20.svg" width="200" height="200"></div>
+        <div class="designer networking web branding illustration cont det eff ent fle"><img src="img/designer-21.svg" width="200" height="200"></div>
+        <div class="designer networking ui motion print cont det eff ent fle"><img src="img/designer-22.svg" width="200" height="200"></div>
+        <div class="designer networking ui motion print goa ind str tea alt"><img src="img/designer-23.svg" width="200" height="200"></div>
+        <div class="designer networking ui motion print goa ind str tea alt"><img src="img/designer-24.svg" width="200" height="200"></div>
+      </div>
+      <div>
+        <input class="next-btn" id="restart-btn" type="button" value="Restart Quiz">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="main-4.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+
+</body>
+</html>
