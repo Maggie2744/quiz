@@ -16,12 +16,12 @@
       <h1>Match With A Designer Quiz</h1>
       <p class="psquish">This quiz was designed to help you connect with designers.</p>
       <p class="psquish">Find a designer available for work, interested in networking, or requesting a portfolio review. By the end of the quiz, you will have a list of designers that match what you're looking for!</p>
-      <button class="next-btn" id="btnIntro" onclick="myFunctionOne">Get Started</button>
+      <button class="next-btn" id="btnIntro"  onClick="toggle_visibility('question1'), toggle_invisibility('intro')">Get Started</button>
     </div>
   </div>
 
   <div id="options">
-    <div class="option-set card" data-group="brand">
+    <div id="question1" class="option-set card" data-group="brand" style="display:none">
       <div class="card-content">
         <h2>Question 1</h2>
         <p>What is your goal?<br><sub>(you may select multiple options)</sub></p>
@@ -31,11 +31,11 @@
           <button class="ks-cboxtags ks-cboxtags-1"><input type="checkbox" value=".networking" id="networking" /><label class="label" for="networking">Networking</label></button>
         </div>
         <div>
-          <button class="next-btn" id="question-1-btn">Continue</button>
+          <button class="next-btn" id="question-1-btn" onClick="toggle_visibility('question2'), toggle_invisibility('question1')">Continue</button>
         </div>
       </div>
     </div>
-    <div class="option-set card" data-group="type">
+    <div id="question2" class="option-set card" data-group="type" style="display:none">
       <div class="card-content">
         <h2>Question 2</h2>
         <p>What design specialization are you in search of?<br><sub>(you may select multiple options)</sub></p>
@@ -46,11 +46,11 @@
         <button class="ks-cboxtags"><input type="checkbox" value=".illustration" id="illustration" /><label class="label" for="illustration">Illustration</label></button>
         <button class="ks-cboxtags"><input type="checkbox" value=".print" id="print" /><label class="label" for="print">Print Design</label></button>
         <div>
-          <button class="next-btn" id="question-2-btn">Continue</button>
+          <button class="next-btn" id="question-2-btn" onClick="toggle_visibility('question3'), toggle_invisibility('question2')">Continue</button>
         </div>
       </div>
     </div>
-    <div class="option-set card" data-group="color">
+    <div id="question3" class="option-set card" data-group="color" style="display:none">
       <div class="card-content">
         <h2>Question 3</h2>
         <p>What key attributes are you looking for in a designer?<br><sub>(you may select multiple options)</sub></p>
@@ -67,13 +67,13 @@
         <button class="ks-cboxtags"><input type="checkbox" value=".str" id="str" /><label class="label" for="str">Strategic</label></button>
         <button class="ks-cboxtags"><input type="checkbox" value=".team" id="team" /><label class="label" for="team">Team-oriented</label></button>
         <div>
-          <button class="next-btn" id="question-3-btn">Continue</button>
+          <button class="next-btn" id="question-3-btn" onClick="toggle_visibility('results'), toggle_invisibility('question3')">Continue</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="card">
+  <div id="results" class="card" style="display:none">
     <div class="card-content results-card">
       <h2 class="results-title">Results</h2>
         <div id="container" class="results-container">
@@ -199,10 +199,33 @@
           </div>
         </div>
         <div class="results-btn">
-          <button class="next-btn" id="restart-btn">Restart Quiz</button>
+          <button type="submit" class="next-btn" id="restart-btn" onClick="refreshpage()">Restart Quiz</button>
         </div>
       </div>
   </div>
+
+  <script>
+    function refreshpage(){
+      window.location.reload();
+    }
+  </script>
+
+  <script type="text/javascript">
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+      }
+      function toggle_invisibility(id) {
+         var e = document.getElementById(id);
+         if(e.style.display == 'block')
+            e.style.display = 'none';
+         else
+            e.style.display = 'none';
+        }
+  </script>
 
   <script src="main.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
